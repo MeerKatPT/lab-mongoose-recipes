@@ -33,6 +33,7 @@ const manageRecipes = async () => {
     console.log("Value updated!");
     await Recipe.deleteOne({ name: "Carrot Cake" });
     console.log("Recipe deleted!");
+    dbConnection.disconnect();
   } catch (error) {
     console.log(error);
   }
